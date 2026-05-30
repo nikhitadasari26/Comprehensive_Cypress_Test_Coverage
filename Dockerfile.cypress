@@ -1,0 +1,17 @@
+FROM cypress/included:13.6.1
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+# Environment variable to enable cypress code coverage plugin if needed
+ENV CYPRESS_COVERAGE=true
+
+ENTRYPOINT []
+
+# Keep container running or run cypress tests. We will run cypress via exec.
+# So just tail to keep it alive
+CMD ["tail", "-f", "/dev/null"]

@@ -1,0 +1,28 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${HOST_PORT:-3006}:3005"
+    environment:
+      - PORT=3005
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:3005"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  cypress-coverage-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.cypress
+    depends_on:
+      app:
+        condition: service_healthy
+    environment:
+      - CYPRESS_BASE_URL=http://app:3005
+    volumes:
+      - ./cypress:/app/cypress
+      - ./coverage:/app/coverage
+      - ./cypress/reports:/app/cypress/reports

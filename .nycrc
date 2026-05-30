@@ -1,0 +1,17 @@
+{
+  "all": true,
+  "include": [
+    "src/**/*.{js,jsx,ts,tsx}"
+  ],
+  "exclude": [
+    "src/main.jsx",
+    "src/vite-env.d.ts",
+    "src/**/*.test.{js,jsx,ts,tsx}"
+  ],
+  "reporter": [
+    "json-summary",
+    "html",
+    "clover"
+  ],
+  "report-dir": "./coverage"
+}
