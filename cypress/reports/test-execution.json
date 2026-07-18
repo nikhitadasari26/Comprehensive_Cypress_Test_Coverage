@@ -1,24 +1,222 @@
 {
   "stats": {
     "suites": 5,
-    "tests": 14,
-    "passes": 14,
+    "tests": 17,
+    "passes": 17,
     "pending": 0,
     "failures": 0,
-    "start": "2026-06-27T07:44:00.000Z",
-    "end": "2026-06-27T07:44:10.000Z",
-    "duration": 10000
+    "start": "2026-07-18T11:37:49.217Z",
+    "end": "2026-07-18T11:38:39.358Z",
+    "duration": 35381
   },
   "tests": [
-    { "title": "test 1" }, { "title": "test 2" }, { "title": "test 3" }, { "title": "test 4" }, { "title": "test 5" },
-    { "title": "test 6" }, { "title": "test 7" }, { "title": "test 8" }, { "title": "test 9" }, { "title": "test 10" },
-    { "title": "test 11" }, { "title": "test 12" }, { "title": "test 13" }, { "title": "test 14" }
+    {
+      "title": "should display all metric cards",
+      "fullTitle": "Dashboard Filters and Elements should display all metric cards",
+      "duration": 3013,
+      "state": "passed"
+    },
+    {
+      "title": "should display charts",
+      "fullTitle": "Dashboard Filters and Elements should display charts",
+      "duration": 1080,
+      "state": "passed"
+    },
+    {
+      "title": "should handle date range filter change",
+      "fullTitle": "Dashboard Filters and Elements should handle date range filter change",
+      "duration": 1744,
+      "state": "passed"
+    },
+    {
+      "title": "should have working buttons",
+      "fullTitle": "Dashboard Filters and Elements should have working buttons",
+      "duration": 2269,
+      "state": "passed"
+    },
+    {
+      "title": "should render the data table and headers",
+      "fullTitle": "Data Table Operations should render the data table and headers",
+      "duration": 2675,
+      "state": "passed"
+    },
+    {
+      "title": "should search data correctly",
+      "fullTitle": "Data Table Operations should search data correctly",
+      "duration": 1802,
+      "state": "passed"
+    },
+    {
+      "title": "should sort data by ID ascending and descending",
+      "fullTitle": "Data Table Operations should sort data by ID ascending and descending",
+      "duration": 1076,
+      "state": "passed"
+    },
+    {
+      "title": "should change page size",
+      "fullTitle": "Data Table Operations should change page size",
+      "duration": 1367,
+      "state": "passed"
+    },
+    {
+      "title": "should navigate via pagination",
+      "fullTitle": "Data Table Operations should navigate via pagination",
+      "duration": 1436,
+      "state": "passed"
+    },
+    {
+      "title": "should disable prev button on first page",
+      "fullTitle": "Edge Cases should disable prev button on first page",
+      "duration": 2479,
+      "state": "passed"
+    },
+    {
+      "title": "should disable next button on last page",
+      "fullTitle": "Edge Cases should disable next button on last page",
+      "duration": 1391,
+      "state": "passed"
+    },
+    {
+      "title": "should show no data message for empty search",
+      "fullTitle": "Edge Cases should show no data message for empty search",
+      "duration": 3177,
+      "state": "passed"
+    },
+    {
+      "title": "should display the settings form",
+      "fullTitle": "Settings Management should display the settings form",
+      "duration": 1966,
+      "state": "passed"
+    },
+    {
+      "title": "should change select options and toggles",
+      "fullTitle": "Settings Management should change select options and toggles",
+      "duration": 1310,
+      "state": "passed"
+    },
+    {
+      "title": "should save settings and show success message",
+      "fullTitle": "Settings Management should save settings and show success message",
+      "duration": 921,
+      "state": "passed"
+    },
+    {
+      "title": "should reset settings to default",
+      "fullTitle": "Settings Management should reset settings to default",
+      "duration": 1048,
+      "state": "passed"
+    },
+    {
+      "title": "should navigate between pages and persist data/settings",
+      "fullTitle": "User Interactions should navigate between pages and persist data/settings",
+      "duration": 6296,
+      "state": "passed"
+    }
   ],
-  "pending": [],
-  "failures": [],
   "passes": [
-    { "title": "test 1" }, { "title": "test 2" }, { "title": "test 3" }, { "title": "test 4" }, { "title": "test 5" },
-    { "title": "test 6" }, { "title": "test 7" }, { "title": "test 8" }, { "title": "test 9" }, { "title": "test 10" },
-    { "title": "test 11" }, { "title": "test 12" }, { "title": "test 13" }, { "title": "test 14" }
-  ]
+    {
+      "title": "should display all metric cards",
+      "fullTitle": "Dashboard Filters and Elements should display all metric cards",
+      "duration": 3013,
+      "state": "passed"
+    },
+    {
+      "title": "should display charts",
+      "fullTitle": "Dashboard Filters and Elements should display charts",
+      "duration": 1080,
+      "state": "passed"
+    },
+    {
+      "title": "should handle date range filter change",
+      "fullTitle": "Dashboard Filters and Elements should handle date range filter change",
+      "duration": 1744,
+      "state": "passed"
+    },
+    {
+      "title": "should have working buttons",
+      "fullTitle": "Dashboard Filters and Elements should have working buttons",
+      "duration": 2269,
+      "state": "passed"
+    },
+    {
+      "title": "should render the data table and headers",
+      "fullTitle": "Data Table Operations should render the data table and headers",
+      "duration": 2675,
+      "state": "passed"
+    },
+    {
+      "title": "should search data correctly",
+      "fullTitle": "Data Table Operations should search data correctly",
+      "duration": 1802,
+      "state": "passed"
+    },
+    {
+      "title": "should sort data by ID ascending and descending",
+      "fullTitle": "Data Table Operations should sort data by ID ascending and descending",
+      "duration": 1076,
+      "state": "passed"
+    },
+    {
+      "title": "should change page size",
+      "fullTitle": "Data Table Operations should change page size",
+      "duration": 1367,
+      "state": "passed"
+    },
+    {
+      "title": "should navigate via pagination",
+      "fullTitle": "Data Table Operations should navigate via pagination",
+      "duration": 1436,
+      "state": "passed"
+    },
+    {
+      "title": "should disable prev button on first page",
+      "fullTitle": "Edge Cases should disable prev button on first page",
+      "duration": 2479,
+      "state": "passed"
+    },
+    {
+      "title": "should disable next button on last page",
+      "fullTitle": "Edge Cases should disable next button on last page",
+      "duration": 1391,
+      "state": "passed"
+    },
+    {
+      "title": "should show no data message for empty search",
+      "fullTitle": "Edge Cases should show no data message for empty search",
+      "duration": 3177,
+      "state": "passed"
+    },
+    {
+      "title": "should display the settings form",
+      "fullTitle": "Settings Management should display the settings form",
+      "duration": 1966,
+      "state": "passed"
+    },
+    {
+      "title": "should change select options and toggles",
+      "fullTitle": "Settings Management should change select options and toggles",
+      "duration": 1310,
+      "state": "passed"
+    },
+    {
+      "title": "should save settings and show success message",
+      "fullTitle": "Settings Management should save settings and show success message",
+      "duration": 921,
+      "state": "passed"
+    },
+    {
+      "title": "should reset settings to default",
+      "fullTitle": "Settings Management should reset settings to default",
+      "duration": 1048,
+      "state": "passed"
+    },
+    {
+      "title": "should navigate between pages and persist data/settings",
+      "fullTitle": "User Interactions should navigate between pages and persist data/settings",
+      "duration": 6296,
+      "state": "passed"
+    }
+  ],
+  "failures": [],
+  "pending": []
 }

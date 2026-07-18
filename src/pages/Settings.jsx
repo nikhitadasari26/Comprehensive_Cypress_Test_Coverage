@@ -9,6 +9,7 @@ const Settings = () => {
   };
 
   const [settings, setSettings] = useState(defaultSettings);
+  const [saveSuccess, setSaveSuccess] = useState(false);
 
   const handleChange = (key, value) => {
     setSettings(prev => ({ ...prev, [key]: value }));
@@ -17,7 +18,8 @@ const Settings = () => {
   const handleSave = (e) => {
     e.preventDefault();
     console.log('Settings saved:', settings);
-    alert('Settings saved successfully!');
+    setSaveSuccess(true);
+    setTimeout(() => setSaveSuccess(false), 3000);
   };
 
   const handleReset = () => {
@@ -28,6 +30,12 @@ const Settings = () => {
     <div className="glass" style={{ padding: '2rem' }}>
       <h1 style={{ marginTop: 0, marginBottom: '2rem' }}>Application Settings</h1>
       
+      {saveSuccess && (
+        <div style={{ padding: '1rem', marginBottom: '1.5rem', backgroundColor: 'rgba(16, 185, 129, 0.2)', border: '1px solid var(--success)', color: 'var(--success)', borderRadius: '8px' }}>
+          Settings saved successfully!
+        </div>
+      )}
+
       <form data-testid="settings-form" className="settings-form" onSubmit={handleSave}>
         
         <div className="form-group">

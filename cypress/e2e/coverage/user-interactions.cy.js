@@ -1,17 +1,24 @@
 describe('User Interactions', () => {
-  it('can navigate through sidebar links', () => {
-    cy.visit('/');
-    
-    cy.contains('Data Table').click();
-    cy.url().should('include', '/data');
-    cy.get('[data-testid="data-table"]').should('be.visible');
+  it('should navigate between pages and persist data/settings', () => {
+    cy.visit('/dashboard');
+    cy.get('[data-testid="metric-card-users"]').should('be.visible');
 
-    cy.contains('Settings').click();
+    // Navigate to Settings
+    cy.get('a[href="/settings"]').click();
     cy.url().should('include', '/settings');
-    cy.get('[data-testid="settings-form"]').should('be.visible');
+    cy.get('[data-testid="theme-toggle"]').uncheck({force: true});
+    cy.get('[data-testid="currency-select"]').select('EUR');
+    cy.get('[data-testid="save-settings-button"]').click();
+    
+    // Navigate to Data Table
+    cy.get('a[href="/data"]').click();
+    cy.url().should('include', '/data');
+    cy.get('[data-testid="search-input"]').type('User 15');
+    cy.get('[data-testid="data-table"]').should('contain', 'User 15');
 
-    cy.contains('Dashboard').click();
+    // Navigate back to Dashboard
+    cy.get('a[href="/dashboard"]').click();
     cy.url().should('include', '/dashboard');
-    cy.get('[data-testid="dashboard-container"]').should('be.visible');
+    cy.get('[data-testid="chart-revenue"]').should('be.visible');
   });
 });

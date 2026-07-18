@@ -8,10 +8,10 @@ export const generateMockData = () => {
       id: i,
       name: `User ${i}`,
       email: `user${i}@example.com`,
-      status: statuses[Math.floor(Math.random() * statuses.length)],
-      region: regions[Math.floor(Math.random() * regions.length)],
-      revenue: Math.floor(Math.random() * 5000) + 100,
-      signupDate: new Date(Date.now() - Math.floor(Math.random() * 10000000000)).toISOString().split('T')[0]
+      status: statuses[i % statuses.length],
+      region: regions[i % regions.length],
+      revenue: 1000 + (i * 37) % 4000,
+      signupDate: `2026-01-${String((i % 28) + 1).padStart(2, '0')}`
     });
   }
   return data;
